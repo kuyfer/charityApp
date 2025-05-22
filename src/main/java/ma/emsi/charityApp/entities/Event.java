@@ -1,8 +1,7 @@
 package ma.emsi.charityApp.entities;
+
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.format.annotation.DateTimeFormat;
-
 import java.util.Date;
 
 @Data
@@ -11,6 +10,7 @@ import java.util.Date;
 @Entity
 
 public class Event {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
@@ -27,7 +27,7 @@ public class Event {
     @Temporal(TemporalType.TIMESTAMP)
     private Date endDate;
 
-    private int organisationId; // Foreign key to Organisation
+    private int organisationId;
 
     private boolean isActive;
 

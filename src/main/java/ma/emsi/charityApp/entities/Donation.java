@@ -1,7 +1,8 @@
 package ma.emsi.charityApp.entities;
+
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.format.annotation.DateTimeFormat;
+
 
 import java.util.Date;
 
@@ -11,17 +12,18 @@ import java.util.Date;
 @Entity
 
 public class Donation {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-   private int userId;
+    private int userId;
 
    private int charityId;
 
    private double amount;
 
-    @Temporal(TemporalType.DATE)
+   @Temporal(TemporalType.DATE)
    private Date date;
 
    private String paymentMethod;

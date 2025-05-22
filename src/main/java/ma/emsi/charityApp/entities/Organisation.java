@@ -1,8 +1,7 @@
 package ma.emsi.charityApp.entities;
+
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.format.annotation.DateTimeFormat;
-
 import java.util.Date;
 
 @Data
@@ -11,6 +10,7 @@ import java.util.Date;
 @Entity
 
 public class Organisation {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
