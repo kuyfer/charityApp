@@ -1,10 +1,64 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Charity App</title>
+    <meta charset="UTF-8">
+    <title>Charity App - Home</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        main {
+            padding: 40px;
+            text-align: center;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        a.button {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        a.button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+    </style>
 </head>
 <body>
-<h1>Welcome to the Charity App</h1>
-<p th:text="'Hello, ' + ${username} + '!'"></p>
+
+<header>
+    <h1>Welcome to Charity App</h1>
+</header>
+
+<main>
+    <p th:text="'Hello, ' + ${username} + '! We are glad to have you here.'"></p>
+    <a th:href="@{/donate}" class="button">Donate Now</a>
+</main>
+
+<footer>
+    &copy; 2025 Charity App. All rights reserved.
+</footer>
+
 </body>
 </html>
